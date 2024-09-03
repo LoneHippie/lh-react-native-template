@@ -3,15 +3,20 @@
   "compilerOptions": {
     "strict": true,
     "paths": {
-      "@/*": [
-        "./*"
-      ]
-    }
+      "~app_contexts/*": ["./src/contexts/*"],
+      "~app_tools/*": ["./src/tools/*"],
+      "~app_app/*": ["./src/app/(app)/*"]
+    },
+    "resolveJsonModule": true
   },
   "include": [
     "**/*.ts",
     "**/*.tsx",
     ".expo/types/**/*.ts",
-    "expo-env.d.ts"
-  ]
+    "expo-env.d.ts",
+    "./src/**/*",
+    "src/**/*",
+    "src/**/*.*"
+  ],
+  "exclude": ["node_modules"]
 }
