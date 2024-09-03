@@ -3,6 +3,7 @@ import React, { useCallback, useEffect } from "react";
 import { Platform } from "react-native";
 import AppProviders from "~app_contexts/AppProviders";
 import AppLoader from "~app_contexts/loader/AppLoader";
+import AppLayout from "~app_tools/components/AppLayout";
 import { addMaximumScaleToMetaViewport } from "~app_tools/utils/page";
 
 const _layout = () => {
@@ -17,7 +18,9 @@ const _layout = () => {
   return (
     <AppProviders>
       <AppLoader />
-      <Slot />;
+      <AppLayout>
+        <Slot />
+      </AppLayout>
     </AppProviders>
   );
 };
