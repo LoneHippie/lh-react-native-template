@@ -1,11 +1,15 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
+import { Typography } from "~app_tools/components/Text";
 
-const index = () => {
+const Index = () => {
   const styles = useStyles();
+
   return (
     <View>
-      <Text style={styles.title}>HELLLOOOO</Text>
+      <Typography size={18} fontWeight={"700"} style={styles.title}>
+        HELLLOOOO
+      </Typography>
     </View>
   );
 };
@@ -13,9 +17,8 @@ const index = () => {
 const useStyles = () =>
   StyleSheet.create({
     title: {
-      fontSize: 20,
       color: "#FFF",
     },
   });
 
-export default index;
+export default Index;

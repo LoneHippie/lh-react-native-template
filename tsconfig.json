@@ -2,10 +2,12 @@
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
     "strict": true,
+    "baseUrl": ".",
     "paths": {
       "~app_contexts/*": ["./src/contexts/*"],
       "~app_tools/*": ["./src/tools/*"],
-      "~app_app/*": ["./src/app/(app)/*"]
+      "~app_app/*": ["./src/app/(app)/*"],
+      "~app_assets/*": ["./assets/*"]
     },
     "resolveJsonModule": true
   },
@@ -18,5 +20,5 @@
     "src/**/*",
     "src/**/*.*"
   ],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "babel.config.js"]
 }
